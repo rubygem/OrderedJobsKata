@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace OrderedJobs.Tests
 {
@@ -6,13 +7,14 @@ namespace OrderedJobs.Tests
     {
         private string _resultingSequence;
 
-        public Sequence(string instruction)
+        public Sequence(string instructions)
         {
-            string job;
-            if (String.IsNullOrEmpty(instruction)) job = String.Empty;
-            else job = new Job().ParseJob(instruction);
-            
-            _resultingSequence = job;
+            var jobList = new List<String>();
+            foreach (var instruction in instructions.Split('\n'))
+            {
+                jobList.Add(new Job(instruction).JobName);
+            }
+            _resultingSequence = String.Join("", jobList);
         }
         
         public String Output()
@@ -23,9 +25,23 @@ namespace OrderedJobs.Tests
 
     public class Job
     {
-        public string ParseJob(String input)
+        public Job(string instruction)
         {
-            return input[0].ToString();
+            ParseName(instruction);
+        }
+
+        public string JobName { get; private set; }
+
+        private void ParseName(String input)
+        {
+            try
+            {
+                JobName = input[0].ToString();
+            }
+            catch (Exception)
+            {
+                JobName = String.Empty;
+            }
         }
     }
 }
