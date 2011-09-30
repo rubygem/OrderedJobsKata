@@ -18,7 +18,7 @@ namespace OrderedJobs.Tests
         public void JobAReturnsA()
         {
             String input = "a =>";
-            String result = GetJob(input);
+            String result = ParseJob(input);
             Assert.That(result, Is.EqualTo("a"));
         }
 
@@ -31,20 +31,24 @@ namespace OrderedJobs.Tests
 
             String input = line1 + line2 + line3;
 
-            String[] lines = input.Split('\n');
-            String inputLine1 = lines[0];
-            String inputLine2 = lines[1];
-            String inputLine3 = lines[2];
-
-            String result = String.Format("{0}{1}{2}", 
-                GetJob(inputLine1), 
-                GetJob(inputLine2), 
-                GetJob(inputLine3));
+            String result = ParseJobs(input);
 
             Assert.That(result, Is.EqualTo("abc"));
         }
 
-        private String GetJob(String input)
+        private string ParseJobs(String input)
+        {
+            var jobs = String.Empty;
+
+            foreach (var line in input.Split('\n'))
+            {
+                jobs += ParseJob(line);
+            }
+
+            return jobs;
+        }
+
+        private String ParseJob(String input)
         {
             return input[0].ToString();
         }
