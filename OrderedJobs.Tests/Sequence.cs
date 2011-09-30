@@ -6,15 +6,16 @@ namespace OrderedJobs.Tests
     {
         private string _resultingSequence;
 
-        public Sequence(string input)
+        public Sequence(string instructions)
         {
-            if (String.IsNullOrEmpty(input)) _resultingSequence = String.Empty;
-            else CalculateSequence(input);
+            if (String.IsNullOrEmpty(instructions)) _resultingSequence = String.Empty;
+            else CalculateSequence(instructions);
         }
 
         private void CalculateSequence(string instruction)
         {
-            _resultingSequence = ParseJob(instruction);
+            var job = ParseJob(instruction);
+            _resultingSequence = job;
         }
 
         private string[] SplitLines(string input)
