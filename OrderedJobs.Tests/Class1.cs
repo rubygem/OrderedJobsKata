@@ -31,26 +31,17 @@ namespace OrderedJobs.Tests
 
             String input = line1 + line2 + line3;
 
-            String result = ParseJobs(input);
+            String result = new Sequence().Output(input);//ParseJobs(input);
 
             Assert.That(result, Is.EqualTo("abc"));
-        }
-
-        private string ParseJobs(String input)
-        {
-            var jobs = String.Empty;
-
-            foreach (var line in input.Split('\n'))
-            {
-                jobs += ParseJob(line);
-            }
-
-            return jobs;
         }
 
         private String ParseJob(String input)
         {
             return input[0].ToString();
         }
+        
     }
+
+    
 }
