@@ -23,9 +23,7 @@ namespace OrderedJobs.Tests
     {
         public string ParseJob(String input)
         {
-            var job = String.Empty;
-            if (!String.IsNullOrEmpty(input)) job = input[0].ToString();
-            return job;
+            return String.IsNullOrEmpty(input) ? String.Empty : input[0].ToString();
         }
     }
 }
