@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace OrderedJobs.Tests
 {
     [TestFixture]
-    public class TakeEmptyStrings
+    public class OrderedJobsKata
     {
         [Test]
         public void EmptyStringReturnsEmptySequence()
@@ -13,23 +13,15 @@ namespace OrderedJobs.Tests
             String result = input;
             Assert.That(result, Is.EqualTo(""));
         }
-    }
-
-    [TestFixture]
-    public class TakeSingleJob
-    {
+    
         [Test]
         public void JobAReturnsA()
         {
             String input = "a =>";
-            String result = input[0].ToString();
+            String result = GetJob(input);
             Assert.That(result, Is.EqualTo("a"));
         }
-    }
 
-    [TestFixture]
-    public class MultipleJobs
-    {
         [Test]
         public void JobsABCReturnsABC()
         {
@@ -44,10 +36,17 @@ namespace OrderedJobs.Tests
             String inputLine2 = lines[1];
             String inputLine3 = lines[2];
 
-            String result = String.Format("{0}{1}{2}", inputLine1[0], inputLine2[0], inputLine3[0]);
-
+            String result = String.Format("{0}{1}{2}", 
+                GetJob(inputLine1), 
+                GetJob(inputLine2), 
+                GetJob(inputLine3));
 
             Assert.That(result, Is.EqualTo("abc"));
+        }
+
+        private String GetJob(String input)
+        {
+            return input[0].ToString();
         }
     }
 }
