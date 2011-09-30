@@ -18,7 +18,7 @@ namespace OrderedJobs.Tests
         public void JobAReturnsA()
         {
             String input = "a =>";
-            String result = ParseJob(input);
+            String result = new Sequence().Output(input);
             Assert.That(result, Is.EqualTo("a"));
         }
 
@@ -31,16 +31,10 @@ namespace OrderedJobs.Tests
 
             String input = line1 + line2 + line3;
 
-            String result = new Sequence().Output(input);//ParseJobs(input);
+            String result = new Sequence().Output(input);
 
             Assert.That(result, Is.EqualTo("abc"));
         }
-
-        private String ParseJob(String input)
-        {
-            return input[0].ToString();
-        }
-        
     }
 
     
