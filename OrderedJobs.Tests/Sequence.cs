@@ -8,7 +8,9 @@ namespace OrderedJobs.Tests
 
         public Sequence(string instruction)
         {
-            var job = new Job().ParseJob(instruction);
+            string job;
+            if (String.IsNullOrEmpty(instruction)) job = String.Empty;
+            else job = new Job().ParseJob(instruction);
             
             _resultingSequence = job;
         }
@@ -23,7 +25,7 @@ namespace OrderedJobs.Tests
     {
         public string ParseJob(String input)
         {
-            return String.IsNullOrEmpty(input) ? String.Empty : input[0].ToString();
+            return input[0].ToString();
         }
     }
 }
