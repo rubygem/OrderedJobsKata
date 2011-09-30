@@ -6,31 +6,26 @@ namespace OrderedJobs.Tests
     {
         private string _resultingSequence;
 
-        public Sequence(string instructions)
+        public Sequence(string instruction)
         {
-            if (String.IsNullOrEmpty(instructions)) _resultingSequence = String.Empty;
-            else CalculateSequence(instructions);
-        }
-
-        private void CalculateSequence(string instruction)
-        {
-            var job = ParseJob(instruction);
+            var job = new Job().ParseJob(instruction);
+            
             _resultingSequence = job;
         }
-
-        private string[] SplitLines(string input)
-        {
-            return input.Split('\n');
-        }
-
-        private String ParseJob(String input)
-        {
-            return input[0].ToString();
-        }
-
+        
         public String Output()
         {
             return _resultingSequence;
+        }
+    }
+
+    public class Job
+    {
+        public string ParseJob(String input)
+        {
+            var job = String.Empty;
+            if (!String.IsNullOrEmpty(input)) job = input[0].ToString();
+            return job;
         }
     }
 }
