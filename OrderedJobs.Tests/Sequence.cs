@@ -1,15 +1,20 @@
 ﻿using System;
-using NUnit.Framework;
 
 namespace OrderedJobs.Tests
 {
     public class Sequence
     {
-        private string _input;
+        private string _resultingSequence;
 
         public Sequence(string input)
         {
-            _input = input;
+            if (String.IsNullOrEmpty(input)) _resultingSequence = String.Empty;
+            else CalculateSequence(input);
+        }
+
+        private void CalculateSequence(string instruction)
+        {
+            _resultingSequence = ParseJob(instruction);
         }
 
         public Sequence()
@@ -42,7 +47,7 @@ namespace OrderedJobs.Tests
 
         public String Output()
         {
-            return String.Empty;
+            return _resultingSequence;
         }
     }
 }

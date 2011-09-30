@@ -12,5 +12,11 @@ namespace OrderedJobs.Tests
             Assert.That(new Sequence(String.Empty).Output(), Is.EqualTo(String.Empty));
         }
 
+        [Test]
+        public void SingleLineInputReturnsSingleJob()
+        {
+            Assert.That(new Sequence("a =>").Output(), Is.EqualTo("a"));
+        }
+
     }
 }
