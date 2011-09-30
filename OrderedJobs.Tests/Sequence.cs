@@ -1,21 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace OrderedJobs.Tests
 {
-    class Sequence
+    internal class Sequence
     {
         public string Output(string input)
         {
             var sequence = String.Empty;
 
-            foreach (var line in SplitLines(input))
+            if (!String.IsNullOrEmpty(input))
             {
-                sequence += ParseJob(line);
-            }
 
+                foreach (var line in SplitLines(input))
+                {
+                    sequence += ParseJob(line);
+                }
+            }
             return sequence;
         }
 
