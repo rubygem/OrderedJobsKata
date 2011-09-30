@@ -9,7 +9,7 @@ namespace OrderedJobs.Tests
         [Test]
         public void EmptyInputReturnsEmptySequence()
         {
-            Assert.That(new Sequence().Output(String.Empty), Is.EqualTo(String.Empty));
+            Assert.That(new Sequence(String.Empty).Output(), Is.EqualTo(String.Empty));
         }
 
     }
