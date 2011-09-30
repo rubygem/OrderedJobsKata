@@ -17,24 +17,6 @@ namespace OrderedJobs.Tests
             _resultingSequence = ParseJob(instruction);
         }
 
-        public Sequence()
-        {
-        }
-
-        public string Output(string input)
-        {
-            var sequence = String.Empty;
-
-            if (!String.IsNullOrEmpty(input))
-            {
-                foreach (var line in SplitLines(input))
-                {
-                    sequence += ParseJob(line);
-                }
-            }
-            return sequence;
-        }
-
         private string[] SplitLines(string input)
         {
             return input.Split('\n');

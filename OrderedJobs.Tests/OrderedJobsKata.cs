@@ -9,7 +9,7 @@ namespace OrderedJobs.Tests
         [Test]
         public void EmptyStringReturnsEmptySequence()
         {
-            String result = new Sequence().Output(String.Empty);
+            String result = new Sequence(String.Empty).Output();
             Assert.That(result, Is.EqualTo(""));
         }
     
@@ -29,7 +29,7 @@ namespace OrderedJobs.Tests
 
             String input = line1 + line2 + line3;
 
-            String result = new Sequence().Output(input);
+            String result = new Sequence(input).Output();
 
             Assert.That(result, Is.EqualTo("abc"));
         }
