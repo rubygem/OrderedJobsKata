@@ -8,7 +8,7 @@ namespace OrderedJobs.Tests
         [Test]
         public void SingleLineInputReturnsSingleJob()
         {
-            Assert.That(new SequenceImp("a =>").Output(), Is.EqualTo("a"));
+            Assert.That(new SequenceImp("a =>").GetSequence(), Is.EqualTo("a"));
         }
     }
 }

@@ -9,14 +9,14 @@ namespace OrderedJobs.Tests
         [Test]
         public void EmptyStringReturnsEmptySequence()
         {
-            String result = new SequenceImp(String.Empty).Output();
+            String result = new SequenceImp(String.Empty).GetSequence();
             Assert.That(result, Is.EqualTo(""));
         }
     
         [Test]
         public void JobAReturnsA()
         {
-            String result = new SequenceImp("a =>").Output();
+            String result = new SequenceImp("a =>").GetSequence();
             Assert.That(result, Is.EqualTo("a"));
         }
 
@@ -29,7 +29,7 @@ namespace OrderedJobs.Tests
 
             String input = line1 + line2 + line3;
 
-            String result = new SequenceImp(input).Output();
+            String result = new SequenceImp(input).GetSequence();
 
             Assert.That(result, Is.EqualTo("abc"));
         }

@@ -3,7 +3,12 @@ using System.Collections.Generic;
 
 namespace OrderedJobs.Tests
 {
-    public class SequenceImp
+    public interface Sequence
+    {
+        String GetSequence(string[] isAny);
+    }
+
+    public class SequenceImp : Sequence
     {
         private string _resultingSequence;
 
@@ -17,14 +22,23 @@ namespace OrderedJobs.Tests
             _resultingSequence = String.Join("", jobList);
         }
 
+        public SequenceImp()
+        {
+        }
+
         private string[] SplitInstructions(string instructions)
         {
             return instructions.Split('\n');
         }
 
-        public String Output()
+        public String GetSequence()
         {
             return _resultingSequence;
+        }
+
+        public String GetSequence(string[] isAny)
+        {
+            throw new NotImplementedException();
         }
     }
     
