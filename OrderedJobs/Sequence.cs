@@ -15,14 +15,9 @@ namespace OrderedJobs
             var jobs = new List<String>();
             foreach (var instruction in instructions)
             {
-                jobs.Add(GetJob(instruction));
+                jobs.Add(new Job(instruction).JobName);
             }
             return jobs.ToArray();
-        }
-
-        private String GetJob(string instruction)
-        {
-            return instruction[0].ToString();
         }
     }
     
