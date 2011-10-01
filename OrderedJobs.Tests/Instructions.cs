@@ -14,11 +14,22 @@ namespace OrderedJobs.Tests
 
         public Instructions(string instructions, Sequence sequence)
         {
-            _instructions = Split(instructions);
+            _instructions = List(instructions);
             _sequence = sequence;
         }
 
-        public String[] Split(string instructions)
+        public Instructions()
+        {
+        }
+
+        public String[] List(string instructions)
+        {
+            var emptyListOfInstructions = new string[0];
+            var listOfInstructions = Split(instructions);
+            return String.IsNullOrEmpty(instructions) ? emptyListOfInstructions : listOfInstructions;
+        }
+
+        private string[] Split(string instructions)
         {
             return instructions.Split('\n');
         }

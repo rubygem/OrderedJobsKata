@@ -17,7 +17,13 @@ namespace OrderedJobs.Tests
             String instructions = "a =>\nb =>\nc =>";
 
             String[] splitInstructions = new[] {line1, line2, line3};
-            Assert.That(new Instructions(instructions).Split(instructions), Is.EqualTo(splitInstructions));
+            Assert.That(new Instructions().List(instructions), Is.EqualTo(splitInstructions));
+        }
+
+        [Test]
+        public void EmptyInstructions()
+        {
+            Assert.That(new Instructions().List(String.Empty), Is.EqualTo(new String[0]));
         }
 
         [Test]
