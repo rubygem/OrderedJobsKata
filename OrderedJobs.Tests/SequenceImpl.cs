@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace OrderedJobs.Tests
 {
-    public interface Sequence
+    public interface ISequence
     {
         String GetSequence(string[] instructions);
     }
 
-    public class SequenceImp : Sequence
+    public class Sequence : ISequence
     {
         public String GetSequence(string[] instructions)
         {
