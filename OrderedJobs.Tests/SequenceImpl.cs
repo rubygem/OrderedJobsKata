@@ -12,13 +12,22 @@ namespace OrderedJobs.Tests
     {
         public String GetSequence(string[] instructions)
         {
-            var jobs = string.Empty;
+            return String.Join("", GetJobs(instructions));
+        }
+
+        private String[] GetJobs(string[] instructions)
+        {
+            var jobs = new List<String>();
             foreach (var instruction in instructions)
             {
-                jobs = jobs + instruction[0];
+                jobs.Add(GetJob(instruction));
             }
+            return jobs.ToArray();
+        }
 
-            return jobs;
+        private String GetJob(string instruction)
+        {
+            return instruction[0].ToString();
         }
     }
     
