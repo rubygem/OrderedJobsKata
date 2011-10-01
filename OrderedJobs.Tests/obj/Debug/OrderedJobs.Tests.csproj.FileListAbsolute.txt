@@ -5,3 +5,5 @@ C:\dev\kata\OrderedJobs\OrderedJobs.Tests\obj\Debug\ResolveAssemblyReference.cac
 C:\dev\kata\OrderedJobs\OrderedJobs.Tests\obj\Debug\OrderedJobs.Tests.dll
 C:\dev\kata\OrderedJobs\OrderedJobs.Tests\obj\Debug\OrderedJobs.Tests.pdb
 C:\dev\kata\OrderedJobs\OrderedJobs.Tests\bin\Debug\Moq.dll
+C:\dev\kata\OrderedJobs\OrderedJobs.Tests\bin\Debug\OrderedJobs.dll
+C:\dev\kata\OrderedJobs\OrderedJobs.Tests\bin\Debug\OrderedJobs.pdb

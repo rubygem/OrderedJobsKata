@@ -37,7 +37,7 @@ namespace OrderedJobs.Tests
             
             String instructions = "a =>\nb =>\nc =>";
 
-            var mockSequence = new Mock<Sequence>();
+            var mockSequence = new Mock<ISequence>();
             var sequence = "abc";
             mockSequence
                 .Setup(x => x.GetSequence(It.IsAny<String[]>()))
