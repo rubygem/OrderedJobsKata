@@ -7,17 +7,37 @@ namespace OrderedJobs
     {
         public String GetSequence(string[] instructions)
         {
-            return String.Join("", GetJobs(instructions));
+            return String.Join("", OrderedListOfJobs(instructions));
         }
 
-        private String[] GetJobs(string[] instructions)
+        private String[] OrderedListOfJobs(string[] instructions)
         {
-            var jobs = new List<String>();
+            List<Job> jobs = CreateListOfJobs(instructions);
+
+            List<string> orderedJobs = GetOrderedJobs(jobs);
+
+            return orderedJobs.ToArray();
+        }
+
+        private List<string> GetOrderedJobs(List<Job> jobs)
+        {
+            var orderedJobs = new List<String>();
+            foreach (var job in jobs)
+            {
+                
+                orderedJobs.Add(job.JobName);
+            }
+            return orderedJobs;
+        }
+
+        private List<Job> CreateListOfJobs(string[] instructions)
+        {
+            var jobs = new List<Job>();
             foreach (var instruction in instructions)
             {
-                jobs.Add(new Job(instruction).JobName);
+                jobs.Add(new Job(instruction));
             }
-            return jobs.ToArray();
+            return jobs;
         }
     }
     
