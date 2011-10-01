@@ -1,4 +1,5 @@
 ﻿using System;
+using Moq;
 using NUnit.Framework;
 
 namespace OrderedJobs.Tests
@@ -18,6 +19,7 @@ namespace OrderedJobs.Tests
             String[] splitInstructions = new[] {line1, line2, line3};
             Assert.That(new Instructions(instructions).Split(), Is.EqualTo(splitInstructions));
         }
+
     }
 
     public class Instructions

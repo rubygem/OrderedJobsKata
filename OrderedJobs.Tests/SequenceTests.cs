@@ -1,5 +1,4 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace OrderedJobs.Tests
 {
@@ -7,16 +6,9 @@ namespace OrderedJobs.Tests
     public class SequenceTests
     {
         [Test]
-        public void EmptyInputReturnsEmptySequence()
-        {
-            Assert.That(new Sequence(String.Empty).Output(), Is.EqualTo(String.Empty));
-        }
-
-        [Test]
         public void SingleLineInputReturnsSingleJob()
         {
-            Assert.That(new Sequence("a =>").Output(), Is.EqualTo("a"));
+            Assert.That(new SequenceImp("a =>").Output(), Is.EqualTo("a"));
         }
-
     }
 }
