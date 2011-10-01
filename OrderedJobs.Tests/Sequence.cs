@@ -10,13 +10,18 @@ namespace OrderedJobs.Tests
         public Sequence(string instructions)
         {
             var jobList = new List<String>();
-            foreach (var instruction in instructions.Split('\n'))
+            foreach (var instruction in SplitInstructions(instructions))
             {
                 jobList.Add(new Job(instruction).JobName);
             }
             _resultingSequence = String.Join("", jobList);
         }
-        
+
+        private string[] SplitInstructions(string instructions)
+        {
+            return instructions.Split('\n');
+        }
+
         public String Output()
         {
             return _resultingSequence;
