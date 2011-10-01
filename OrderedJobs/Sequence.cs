@@ -12,7 +12,7 @@ namespace OrderedJobs
 
         private String[] OrderedListOfJobs(string[] instructions)
         {
-            List<Job> jobs = CreateListOfJobs(instructions);
+            List<Job> jobs = CreateListOfOrderedJobs(instructions);
 
             List<string> orderedJobs = GetOrderedJobs(jobs);
 
@@ -30,7 +30,7 @@ namespace OrderedJobs
             return orderedJobs;
         }
 
-        private List<Job> CreateListOfJobs(string[] instructions)
+        private List<Job> CreateListOfOrderedJobs(string[] instructions)
         {
             var jobs = new List<Job>();
             foreach (var instruction in instructions)
