@@ -5,7 +5,7 @@ namespace OrderedJobs.Tests
 {
     public interface Sequence
     {
-        String GetSequence(string[] isAny);
+        String GetSequence(string[] instructions);
     }
 
     public class SequenceImp : Sequence
@@ -36,9 +36,15 @@ namespace OrderedJobs.Tests
             return _resultingSequence;
         }
 
-        public String GetSequence(string[] isAny)
+        public String GetSequence(string[] instructions)
         {
-            throw new NotImplementedException();
+            var jobs = string.Empty;
+            foreach (var instruction in instructions)
+            {
+                jobs = jobs + instruction[0];
+            }
+
+            return jobs;
         }
     }
     

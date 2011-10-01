@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Instructions.cs" />
     <Compile Include="InstructionsTests.cs" />
     <Compile Include="OrderedJobsKata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -16,7 +16,7 @@ namespace OrderedJobs.Tests
         [Test]
         public void JobAReturnsA()
         {
-            String result = new SequenceImp("a =>").GetSequence();
+            String result = new Instructions("a =>").ComputeSequence();
             Assert.That(result, Is.EqualTo("a"));
         }
 
