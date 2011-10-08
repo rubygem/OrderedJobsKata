@@ -1,4 +1,0 @@
-<Modules>
-  <Module PersistentId="935173FA-D4E7-40ED-9605-DF3681E40D30" ModuleId="OrderedJobs" />
-  <Module PersistentId="5F699334-8109-431A-A775-4C9630C3C833" ModuleId="OrderedJobs.Tests" />
-</Modules>
