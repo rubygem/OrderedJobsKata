@@ -12,10 +12,12 @@ namespace OrderedJobs
     {
         public Job(string instruction)
         {
-            var split = instruction.Split(new string[]{"=>"}, StringSplitOptions.RemoveEmptyEntries);
-            Name = split[0].Trim();
-            if (split.Length > 1) Dependency = new Job(split[1].Trim());
+            Instruction = instruction.Split(new string[]{"=>"}, StringSplitOptions.RemoveEmptyEntries);
+            Name = Instruction[0].Trim();
+            if (Instruction.Length > 1) Dependency = new Job(Instruction[1].Trim());
         }
+
+        private string[] Instruction { get; set; }
 
         public String Name { get; set; }
 
