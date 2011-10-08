@@ -12,15 +12,22 @@ namespace OrderedJobs
     {
         public Job(string instruction)
         {
-            Instruction = instruction.Split(new string[]{"=>"}, StringSplitOptions.RemoveEmptyEntries);
-            Name = Instruction[0].Trim();
-            if (Instruction.Length > 1) Dependency = new Job(Instruction[1].Trim());
+            _instruction = instruction.Split(new[] {"=>"}, StringSplitOptions.RemoveEmptyEntries);
         }
 
-        private string[] Instruction { get; set; }
+        private readonly string[] _instruction;
 
-        public String Name { get; set; }
+        public string Name
+        {
+            get { return _instruction[0].Trim(); }
+        }
 
-        public Job Dependency { get; set; }
+        public Job Dependency
+        {
+            get
+            {
+                return _instruction.Length > 1 ? new Job(_instruction[1].Trim()) : null;
+            }
+        }
     }
 }
