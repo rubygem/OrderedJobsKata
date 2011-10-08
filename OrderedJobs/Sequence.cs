@@ -15,7 +15,7 @@ namespace OrderedJobs
             var jobs = new List<String>();
             foreach (var instruction in instructions)
             {
-                jobs.Add(new Job(instruction).JobName);
+                jobs.Add(new Job(instruction).Name);
             }
             return jobs;
         }

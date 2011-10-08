@@ -35,7 +35,7 @@ namespace OrderedJobs.Tests
         }
 
         [Test]
-        public void StepFourMultipleJobsSingleDependancy()
+        public void StepFourMultipleJobsSingleDependency()
         {
             var line1 = "a =>\n";
             var line2 = "b => c\n";

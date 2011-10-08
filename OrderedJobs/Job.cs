@@ -5,15 +5,18 @@ namespace OrderedJobs
     public abstract class IJob
     {
         public String JobName;
+        private Job Dependency;
     }
 
     public class Job : IJob
     {
         public Job(string instruction)
         {
-            JobName = instruction[0].ToString();
+            Name = instruction[0].ToString();
         }
 
-        public String JobName { get; set; }
+        public String Name { get; set; }
+
+        public Job Dependency { get; set; }
     }
 }

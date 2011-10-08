@@ -6,9 +6,21 @@ namespace OrderedJobs.Tests
     public class JobTest
     {
         [Test]
-        public void InstructionReturnsJob()
+        public void InstructionReturnsJobName()
         {
-            Assert.That(new Job("a=>").JobName, Is.EqualTo("a"));
+            Assert.That(new Job("a=>").Name, Is.EqualTo("a"));
+        }
+
+        [Test]
+        public void InstructionReturnsJobDependency()
+        {
+            Assert.That(new Job("a=>").Dependency, Is.Null);
+        }
+
+        [Test]
+        public void InstructionReturnsJobItDependsOn()
+        {
+            Assert.That(new Job("a=>b").Dependency, Is.EqualTo(new Job("b=>")));
         }
     }
 }
