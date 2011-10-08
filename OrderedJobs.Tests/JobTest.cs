@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Moq;
+using NUnit.Framework;
 
 namespace OrderedJobs.Tests
 {
@@ -20,7 +21,7 @@ namespace OrderedJobs.Tests
         [Test]
         public void InstructionReturnsJobItDependsOn()
         {
-            Assert.That(new Job("a=>b").Dependency, Is.EqualTo(new Job("b=>")));
+            Assert.That(new Job("a=>b").Dependency.Name, Is.EqualTo("b"));
         }
     }
 }
