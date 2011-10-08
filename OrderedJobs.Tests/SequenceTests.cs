@@ -16,5 +16,11 @@ namespace OrderedJobs.Tests
         {
             Assert.That(new Sequence().GetSequence(new[] { "a =>", "b =>" }), Is.EqualTo("ab"));
         }
+
+        [Test]
+        public void TwoLineInputWithDependencyReturnsTwoJobs()
+        {
+            Assert.That(new Sequence().GetSequence(new[] { "a =>b", "b =>" }), Is.EqualTo("ba"));
+        }
     }
 }
