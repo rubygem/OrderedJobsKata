@@ -7,21 +7,21 @@ namespace OrderedJobs.Tests
     public class OrderedJobsKata
     {
         [Test]
-        public void EmptyStringReturnsEmptySequence()
+        public void StepOneEmptyStringReturnsEmptySequence()
         {
             String result = new Instructions(String.Empty).ComputeSequence();
             Assert.That(result, Is.EqualTo(""));
         }
     
         [Test]
-        public void JobAReturnsA()
+        public void StepTwoJobAReturnsA()
         {
             String result = new Instructions("a =>").ComputeSequence();
             Assert.That(result, Is.EqualTo("a"));
         }
 
         [Test]
-        public void JobsABCReturnsABC()
+        public void StepThreeJobsABCReturnsABC()
         {
             var line1 = "a =>\n";
             var line2 = "b =>\n";
@@ -32,6 +32,20 @@ namespace OrderedJobs.Tests
             String result = new Instructions(input).ComputeSequence();
 
             Assert.That(result, Is.EqualTo("abc"));
+        }
+
+        [Test]
+        public void StepFourMultipleJobsSingleDependancy()
+        {
+            var line1 = "a =>\n";
+            var line2 = "b => c\n";
+            var line3 = "c =>";
+
+            String input = line1 + line2 + line3;
+
+            String result = new Instructions(input).ComputeSequence();
+
+            Assert.That(result, Is.EqualTo("acb"));
         }
     }
 

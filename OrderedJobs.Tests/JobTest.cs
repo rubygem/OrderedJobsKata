@@ -10,6 +10,5 @@ namespace OrderedJobs.Tests
         {
             Assert.That(new Job("a=>").JobName, Is.EqualTo("a"));
         }
-
     }
 }

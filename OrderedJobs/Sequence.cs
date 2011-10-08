@@ -24,7 +24,6 @@ namespace OrderedJobs
             var orderedJobs = new List<String>();
             foreach (var job in jobs)
             {
-                
                 orderedJobs.Add(job.JobName);
             }
             return orderedJobs;
