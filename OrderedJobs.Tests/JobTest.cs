@@ -1,7 +1,7 @@
 ﻿using Moq;
 using NUnit.Framework;
 
-namespace OrderedJobs.Tests
+namespace Instructions.Tests
 {
     [TestFixture]
     public class JobTest

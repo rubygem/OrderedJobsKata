@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using OrderedJobs;
 
-namespace OrderedJobs
+namespace Instructions
 {
     public class Sequence : ISequence
     {
@@ -12,12 +13,13 @@ namespace OrderedJobs
 
         private List<String> CreateListOfJobNames(string[] instructions)
         {
-            var jobs = new List<String>();
+            List<Job> jobs = new List<Job>();
             foreach (var instruction in instructions)
             {
-                jobs.Add(new Job(instruction).Name);
+                jobs.Add(new Job(instruction));
             }
-            return jobs;
+
+            return new Jobs().Order(jobs);
         }
     }
     

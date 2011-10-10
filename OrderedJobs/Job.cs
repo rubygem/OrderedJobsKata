@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace OrderedJobs
+namespace Instructions
 {
     public abstract class IJob
     {
