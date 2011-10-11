@@ -29,10 +29,11 @@ namespace OrderedJobs.Tests
             Assert.That(sequence.GetSequence(new[] { "a =>b", "b =>" }), Is.EqualTo(new List<string> { "b","a" }));
         }
 
-        //[Test]
-        //public void ThreeLinesWithDependenciesReturnsThreeJobsInOrder()
-        //{
-        //    var sequence = new Sequence();
-        //}
+        [Test]
+        public void ThreeLinesWithDependenciesReturnsThreeJobsInOrder()
+        {
+            var sequence = new Sequence();
+            Assert.That(sequence.GetSequence(new[] { "a =>c", "b =>", "c =>b" }), Is.EqualTo(new List<string> { "b", "c", "a" }));
+        }
     }
 }

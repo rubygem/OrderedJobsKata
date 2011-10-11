@@ -48,19 +48,19 @@ namespace Instructions.Tests
             Assert.That(result, Is.EqualTo("acb"));
         }
 
-        //[Test]
-        //public void StepFiveMultipleJobsMultipleDependencies()
-        //{
-        //    var instructions = new[]
-        //                           {
-        //                               "a =>", "b => c", "c => f", "d => a", "e => b", "f =>"
-        //                           };
+        [Test]
+        public void StepFiveMultipleJobsMultipleDependencies()
+        {
+            var instructions = new[]
+                                   {
+                                       "a =>", "b => c", "c => f", "d => a", "e => b", "f =>"
+                                   };
 
-        //    var input = String.Join("\n", instructions);
+            var input = String.Join("\n", instructions);
 
-        //    String result = new Instructions(input).ComputeSequence();
+            String result = new Instructions(input).ComputeSequence();
 
-        //    Assert.That(result, Is.EqualTo("afcdbef"));
-        //}
+            Assert.That(result, Is.EqualTo("afcdbef"));
+        }
     }
 }
