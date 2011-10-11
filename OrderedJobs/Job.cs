@@ -2,13 +2,7 @@
 
 namespace Instructions
 {
-    public abstract class IJob
-    {
-        public String JobName;
-        private Job Dependency;
-    }
-
-    public class Job : IJob
+    public class Job
     {
         public Job(string instruction)
         {
@@ -20,7 +14,7 @@ namespace Instructions
         public string Name
         {
             get { return _instruction[0].Trim(); }
-        }
+        } 
 
         public Job Dependency
         {
