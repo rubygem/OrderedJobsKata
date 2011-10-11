@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Instructions
 {
     public interface ISequence
     {
-        String GetSequence(string[] instructions);
+        List<String> GetSequence(string[] instructions);
     }
 }

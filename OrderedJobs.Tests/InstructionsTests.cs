@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
 
@@ -38,13 +39,13 @@ namespace Instructions.Tests
             String instructions = "a =>\nb =>\nc =>";
 
             var mockSequence = new Mock<ISequence>();
-            var sequence = "abc";
+            var sequence = new List<string>() { "a", "b", "c" };
             mockSequence
                 .Setup(x => x.GetSequence(It.IsAny<String[]>()))
                 .Returns(sequence);
 
             Assert.That(new Instructions(instructions, mockSequence.Object).ComputeSequence(), 
-                Is.EqualTo(sequence));
+                Is.EqualTo("abc"));
 
             mockSequence.Verify(x => x.GetSequence(splitInstructions));
         }

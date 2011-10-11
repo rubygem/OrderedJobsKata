@@ -5,12 +5,7 @@ namespace Instructions
 {
     public class Sequence : ISequence
     {
-        public String GetSequence(string[] instructions)
-        {
-            return String.Join("", CreateListOfJobNames(instructions));
-        }
-
-        private List<String> CreateListOfJobNames(string[] instructions)
+        public List<String> GetSequence(string[] instructions)
         {
             List<Job> jobs = GetJobs(instructions);
 

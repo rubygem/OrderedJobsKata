@@ -36,7 +36,8 @@ namespace Instructions
 
         public String ComputeSequence()
         {
-            return _sequence.GetSequence(_instructions);
+            var sequence = _sequence.GetSequence(_instructions);
+            return String.Join("", sequence);
         }
     }
 }

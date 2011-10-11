@@ -12,21 +12,27 @@ namespace OrderedJobs.Tests
         public void SingleLineInputReturnsSingleJob()
         {
             var sequence = new Sequence();
-            Assert.That(sequence.GetSequence(new[] { "a =>" }), Is.EqualTo("a"));
+            Assert.That(sequence.GetSequence(new[] { "a =>" }), Is.EqualTo(new List<string> {"a"}));
         }
 
         [Test]
         public void TwoLineInputReturnsTwoJobs()
         {
             var sequence = new Sequence();
-            Assert.That(sequence.GetSequence(new[] { "a =>", "b =>" }), Is.EqualTo("ab"));
+            Assert.That(sequence.GetSequence(new[] { "a =>", "b =>" }), Is.EqualTo(new List<string> { "a", "b" }));
         }
 
         [Test]
         public void TwoLineInputWithDependencyReturnsTwoJobs()
         {
             var sequence = new Sequence();
-            Assert.That(sequence.GetSequence(new[] { "a =>b", "b =>" }), Is.EqualTo("ba"));
+            Assert.That(sequence.GetSequence(new[] { "a =>b", "b =>" }), Is.EqualTo(new List<string> { "b","a" }));
         }
+
+        //[Test]
+        //public void ThreeLinesWithDependenciesReturnsThreeJobsInOrder()
+        //{
+        //    var sequence = new Sequence();
+        //}
     }
 }
