@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using OrderedJobs;
 
 namespace Instructions
 {
@@ -36,7 +38,15 @@ namespace Instructions
 
         public String ComputeSequence()
         {
-            var sequence = _sequence.GetSequence(_instructions);
+            List<string> sequence;
+            try
+            {
+                sequence = _sequence.GetSequence(_instructions);
+            }
+            catch (SelfReferencingException)
+            {
+                return "Error: jobs can't depend on themselves";
+            }
             return String.Join("", sequence);
         }
     }

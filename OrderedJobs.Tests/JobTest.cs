@@ -1,5 +1,6 @@
 ﻿using Moq;
 using NUnit.Framework;
+using OrderedJobs;
 
 namespace Instructions.Tests
 {
@@ -34,6 +35,20 @@ namespace Instructions.Tests
         public void DoesNotHaveDependency()
         {
             Assert.That(new Job("a =>").HasDependency, Is.False);
+        }
+
+        [Test]
+        public void SelfReferencingDependencyThrowsException()
+        {
+            try
+            {
+                new Job("c =>c");
+                Assert.Fail("Expected Self Referencing Dependency Exception");
+            }
+            catch (SelfReferencingException)
+            {
+                Assert.Pass();
+            }
         }
     }
 }

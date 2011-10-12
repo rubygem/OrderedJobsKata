@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Moq;
 using NUnit.Framework;
+using OrderedJobs;
 
 namespace Instructions.Tests
 {
@@ -48,6 +49,17 @@ namespace Instructions.Tests
                 Is.EqualTo("abc"));
 
             mockSequence.Verify(x => x.GetSequence(splitInstructions));
+        }
+
+        [Test]
+        public void HandleSelfReferencingErrorWithFreindlyMessage()
+        {
+            Mock<ISequence> mockSequence = new Mock<ISequence>();
+            mockSequence
+                .Setup(x => x.GetSequence(It.IsAny<string[]>()))
+                .Throws(new SelfReferencingException());
+            var instructions = new Instructions("c =>c", mockSequence.Object);
+            Assert.That(instructions.ComputeSequence(), Is.EqualTo("Error: jobs can't depend on themselves"));
         }
     }
 }

@@ -1,12 +1,14 @@
 ﻿using System;
 
-namespace Instructions
+namespace OrderedJobs
 {
     public class Job
     {
         public Job(string instruction)
         {
             _instruction = instruction.Split(new[] {"=>"}, StringSplitOptions.RemoveEmptyEntries);
+            if (HasDependency && Dependency.Name == Name) throw new SelfReferencingException();
+
         }
 
         private readonly string[] _instruction;
@@ -18,7 +20,15 @@ namespace Instructions
 
         public Job Dependency
         {
-            get { return _instruction.Length > 1 ? new Job(_instruction[1].Trim()) : null; }
+            get
+            {
+                Job dependency = null;
+                if (_instruction.Length > 1)
+                {
+                    dependency = new Job(_instruction[1].Trim());
+                }
+                return dependency;    
+            }
         }
 
         public bool HasDependency
