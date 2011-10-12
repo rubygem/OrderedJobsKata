@@ -9,25 +9,16 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:JobTest.cs" caret="563" fromTop="21" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Job.cs" caret="64" fromTop="4" />
       <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:ISequence.cs" caret="184" fromTop="9" />
       <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Instructions.cs" caret="1102" fromTop="20" />
       <File id="5F699334-8109-431A-A775-4C9630C3C833/f:InstructionsTests.cs" caret="1160" fromTop="26" />
       <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="1837" fromTop="28" />
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="1126" fromTop="19" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="883" fromTop="30" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:JobTest.cs" caret="274" fromTop="13" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Job.cs" caret="631" fromTop="19" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="1270" fromTop="26" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1483" fromTop="26" />
     </RecentFiles>
     <RecentEdits>
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="338" fromTop="17" />
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="196" fromTop="8" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="297" fromTop="14" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="984" fromTop="20" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="48" fromTop="1" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Job.cs" caret="389" fromTop="22" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="297" fromTop="14" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="624" fromTop="29" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="402" fromTop="21" />
       <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Job.cs" caret="64" fromTop="4" />
       <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="1631" fromTop="36" />
       <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="1631" fromTop="33" />
@@ -44,7 +35,20 @@
       <File id="5F699334-8109-431A-A775-4C9630C3C833/f:InstructionsTests.cs" caret="1487" fromTop="33" />
       <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="1837" fromTop="28" />
       <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="953" fromTop="31" />
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="1210" fromTop="35" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="857" fromTop="25" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="857" fromTop="30" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:JobTest.cs" caret="886" fromTop="25" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Job.cs" caret="136" fromTop="26" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Job.cs" caret="631" fromTop="19" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="707" fromTop="20" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1920" fromTop="33" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1920" fromTop="31" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1909" fromTop="37" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="671" fromTop="17" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1675" fromTop="29" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="1453" fromTop="29" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1593" fromTop="40" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1483" fromTop="26" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -59,30 +63,30 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="public" priority="9" />
-      <Item value="void" priority="9" />
-      <Item value="Assert`0" priority="3" />
-      <Item value="string" priority="7" />
-      <Item value="Is`0" priority="3" />
-      <Item value="String`0" priority="6" />
-      <Item value="return" priority="7" />
-      <Item value="jobs" priority="1" />
-      <Item value="new" priority="25" />
-      <Item value="Job`0" priority="6" />
+      <Item value="public" priority="13" />
+      <Item value="void" priority="12" />
+      <Item value="Assert`0" priority="6" />
+      <Item value="string" priority="11" />
+      <Item value="Is`0" priority="6" />
+      <Item value="String`0" priority="7" />
+      <Item value="return" priority="12" />
+      <Item value="jobs" priority="3" />
+      <Item value="new" priority="29" />
+      <Item value="Job`0" priority="9" />
       <Item value="ITestCaseData`0" priority="1" />
       <Item value="j" priority="1" />
-      <Item value="Dependency" priority="0" />
-      <Item value="Job" priority="2" />
+      <Item value="Dependency" priority="1" />
+      <Item value="Job" priority="5" />
       <Item value="instruction" priority="4" />
       <Item value="StringSplitOptions`0" priority="1" />
-      <Item value="var" priority="11" />
+      <Item value="var" priority="15" />
       <Item value="split" priority="1" />
-      <Item value="if" priority="2" />
+      <Item value="if" priority="6" />
       <Item value="Length" priority="0" />
       <Item value="private" priority="0" />
       <Item value="set" priority="0" />
       <Item value="Instruction" priority="0" />
-      <Item value="null" priority="1" />
+      <Item value="null" priority="5" />
       <Item value="TestFixture" priority="0" />
       <Item value="OrderedJobs" priority="1" />
       <Item value="List`0" priority="4" />
@@ -91,10 +95,10 @@
       <Item value="List&lt;string&gt;" priority="1" />
       <Item value="SetUp" priority="1" />
       <Item value="List" priority="1" />
-      <Item value="stringJobs" priority="6" />
-      <Item value="job" priority="2" />
+      <Item value="stringJobs" priority="13" />
+      <Item value="job" priority="9" />
       <Item value="_expectedJobs" priority="1" />
-      <Item value="foreach" priority="2" />
+      <Item value="foreach" priority="10" />
       <Item value="throw" priority="0" />
       <Item value="NotImplementedException" priority="0" />
       <Item value="_sequence" priority="0" />
@@ -107,18 +111,27 @@
       <Item value="Mock`0" priority="1" />
       <Item value="Mock&lt;IJob&gt;" priority="0" />
       <Item value="input" priority="0" />
-      <Item value="instructions" priority="0" />
+      <Item value="instructions" priority="1" />
+      <Item value="else" priority="1" />
+      <Item value="dependency" priority="1" />
+      <Item value="for" priority="1" />
+      <Item value="Int16`0" priority="0" />
+      <Item value="jobNames" priority="7" />
+      <Item value="positionOfDependency" priority="0" />
+      <Item value="positionOfJob" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
-      <Item value="That`0" priority="2" />
+      <Item value="That`0" priority="5" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
-      <Item value="Empty" priority="1" />
+      <Item value="Empty" priority="3" />
       <Item value="Join`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@NUnit.Framework.Is">
-      <Item value="EqualTo`0" priority="4" />
+      <Item value="EqualTo`0" priority="5" />
       <Item value="Null" priority="1" />
+      <Item value="True" priority="0" />
+      <Item value="False" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:OrderedJobs.Job">
       <Item value="JobName" priority="1" />
@@ -136,15 +149,21 @@
       <Item value="RemoveEmptyEntries" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
-      <Item value="Add`0" priority="1" />
-      <Item value="Count" priority="1" />
-      <Item value="Remove`0" priority="0" />
+      <Item value="Add`0" priority="2" />
+      <Item value="Count" priority="3" />
+      <Item value="Remove`0" priority="2" />
       <Item value="RemoveAt`0" priority="0" />
-      <Item value="Contains`0" priority="0" />
+      <Item value="Contains`0" priority="1" />
+      <Item value="Insert`0" priority="1" />
+      <Item value="FindIndex`0" priority="0" />
+      <Item value="IndexOf`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Instructions.Job">
-      <Item value="Name" priority="2" />
-      <Item value="Dependency" priority="1" />
+      <Item value="Name" priority="9" />
+      <Item value="Dependency" priority="6" />
+      <Item value="GetHashCode`0" priority="0" />
+      <Item value="HasDependency`0" priority="1" />
+      <Item value="HasDependency" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Moq.Mock`1">
       <Item value="Setup`1" priority="1" />
@@ -152,6 +171,11 @@
     <ItemStatistics item="Qualified:Instructions.IJob">
       <Item value="Name" priority="0" />
       <Item value="Dependency" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Instructions.Sequence">
+      <Item value="GetHashCode`0" priority="0" />
+      <Item value="GetSequence`0" priority="0" />
+      <Item value="SortByDependencies`0" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

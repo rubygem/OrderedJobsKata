@@ -60,7 +60,7 @@ namespace Instructions.Tests
 
             String result = new Instructions(input).ComputeSequence();
 
-            Assert.That(result, Is.EqualTo("afcdbef"));
+            Assert.That(result, Is.EqualTo("afcbde"));
         }
     }
 }
