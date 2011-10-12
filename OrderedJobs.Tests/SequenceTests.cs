@@ -35,5 +35,12 @@ namespace OrderedJobs.Tests
             var sequence = new Sequence();
             Assert.That(sequence.GetSequence(new[] { "a =>c", "b =>", "c =>b" }), Is.EqualTo(new List<string> { "b", "c", "a" }));
         }
+
+        [Test]
+        public void SortByDependencies()
+        {
+            var orderedJobNames = new List<string> {"b", "c", "a"};
+            Assert.That(new Sequence().SortByDependencies(jobs, jobNames), Is.EqualTo(orderedJobNames));
+        }
     }
 }

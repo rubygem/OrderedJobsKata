@@ -23,5 +23,17 @@ namespace Instructions.Tests
         {
             Assert.That(new Job("a=>b").Dependency.Name, Is.EqualTo("b"));
         }
+
+        [Test]
+        public void HasDependency()
+        {
+            Assert.That(new Job("a =>b").HasDependency, Is.True);
+        }
+
+        [Test]
+        public void DoesNotHaveDependency()
+        {
+            Assert.That(new Job("a =>").HasDependency, Is.False);
+        }
     }
 }

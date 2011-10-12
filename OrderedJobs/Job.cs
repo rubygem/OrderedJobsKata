@@ -14,14 +14,16 @@ namespace Instructions
         public string Name
         {
             get { return _instruction[0].Trim(); }
-        } 
+        }
 
         public Job Dependency
         {
-            get
-            {
-                return _instruction.Length > 1 ? new Job(_instruction[1].Trim()) : null;
-            }
+            get { return _instruction.Length > 1 ? new Job(_instruction[1].Trim()) : null; }
+        }
+
+        public bool HasDependency
+        {
+            get { return Dependency != null; }
         }
     }
 }

@@ -24,13 +24,27 @@ namespace Instructions
 
         private List<string> Order(List<Job> jobs)
         {
-            var stringJobs = new List<string>();
+            var jobNames = new List<string>();
+            jobNames = AddJobs(jobs, jobNames);
+            jobNames = SortByDependencies(jobs, jobNames);
+            
+            return jobNames;
+        }
+
+        public List<string> SortByDependencies(List<Job> jobs, List<string> jobNames)
+        {
+            throw new NotImplementedException();
+        }
+
+        private List<string> AddJobs(List<Job> jobs, List<string> jobNames)
+        {
             foreach (var job in jobs)
             {
-                if (job.Dependency != null) stringJobs.Add(job.Dependency.Name);
-                if (!stringJobs.Contains(job.Name)) stringJobs.Add(job.Name);
+                var jobName = job.Name;
+                if (!jobNames.Contains(jobName)) jobNames.Add(jobName);
             }
-            return stringJobs;
+
+            return jobNames;
         }
     }
     
