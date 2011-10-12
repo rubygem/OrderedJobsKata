@@ -74,5 +74,25 @@ namespace Instructions.Tests
 
             Assert.That(result, Is.EqualTo("Error: jobs can't depend on themselves"));
         }
+
+        [Test]
+        public void StepSevenCircularDependencies()
+        {
+            var instructions = new[]
+                                   {
+                                       "a =>",
+                                       "b => c",
+                                       "c => f",
+                                       "d => a",
+                                       "e =>",
+                                       "f => b"
+                                   };
+
+            var input = String.Join("\n", instructions);
+
+            String result = new Instructions(input).ComputeSequence();
+
+            Assert.That(result, Is.EqualTo("Error: circular dependency found"));
+        }
     }
 }
