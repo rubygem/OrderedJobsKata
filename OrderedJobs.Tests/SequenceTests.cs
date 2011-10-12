@@ -40,6 +40,8 @@ namespace OrderedJobs.Tests
         public void SortByDependencies()
         {
             var orderedJobNames = new List<string> {"b", "c", "a"};
+            var jobs = new List<Job> {new Job("a =>c"), new Job("b =>"), new Job("c =>b")};
+            var jobNames = new List<string> { "a", "b", "c" };
             Assert.That(new Sequence().SortByDependencies(jobs, jobNames), Is.EqualTo(orderedJobNames));
         }
     }

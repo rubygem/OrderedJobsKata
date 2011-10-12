@@ -33,7 +33,14 @@ namespace Instructions
 
         public List<string> SortByDependencies(List<Job> jobs, List<string> jobNames)
         {
-            throw new NotImplementedException();
+            foreach (var job in jobs)
+            {
+                if (job.HasDependency)
+                {
+                    var positionOfJob = jobNames.IndexOf(job.Name);
+                    var positionOfDependency = jobNames.IndexOf(job.Dependency.Name);
+                }
+            }
         }
 
         private List<string> AddJobs(List<Job> jobs, List<string> jobNames)
