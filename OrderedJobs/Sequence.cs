@@ -39,8 +39,15 @@ namespace Instructions
                 {
                     var positionOfJob = jobNames.IndexOf(job.Name);
                     var positionOfDependency = jobNames.IndexOf(job.Dependency.Name);
+
+                    if (positionOfDependency > positionOfJob)
+                    {
+                        jobNames.Remove(job.Dependency.Name); //MoveDependencyUp(job.Dependency.Name, jobNames);
+                        jobNames.Insert(positionOfJob, job.Dependency.Name);
+                    }
                 }
             }
+            return jobNames;
         }
 
         private List<string> AddJobs(List<Job> jobs, List<string> jobNames)
