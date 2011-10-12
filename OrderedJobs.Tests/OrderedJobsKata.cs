@@ -62,5 +62,17 @@ namespace Instructions.Tests
 
             Assert.That(result, Is.EqualTo("afcbde"));
         }
+
+        [Test]
+        public void StepSixSelfReferencingDependency()
+        {
+            var instructions = new[] {"a =>", "b =>", "c => c"};
+
+            var input = String.Join("\n", instructions);
+
+            String result = new Instructions(input).ComputeSequence();
+
+            Assert.That(result, Is.EqualTo("Error: jobs can't depend on themselves"));
+        }
     }
 }
