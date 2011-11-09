@@ -34,20 +34,50 @@ namespace Instructions
 
         public List<string> SortByDependencies(List<Job> jobs, List<string> jobNames)
         {
+            var dependencyList = new List<string>();
             foreach (var job in jobs)
             {
                 if (job.HasDependency)
                 {
-                    var positionOfJob = jobNames.IndexOf(job.Name);
-                    var positionOfDependency = jobNames.IndexOf(job.Dependency.Name);
-
-                    if (positionOfDependency > positionOfJob)
-                    {
-                        jobNames.Remove(job.Dependency.Name); //MoveDependencyUp(job.Dependency.Name, jobNames);
-                        jobNames.Insert(positionOfJob, job.Dependency.Name);
-                    }
+                    if (dependencyList.Contains(job.DependencyName)) throw new CircularDependencyException();
+                    dependencyList.Add(job.DependencyName);
+                    jobNames = ReorderList(job, jobNames);
                 }
             }
+            return jobNames;
+        }
+
+        //public List<string> SortByDependencies(List<Job> jobs, List<string> jobNames)
+        //{
+        //    List<string> dependencyList = new List<string>();
+        //    foreach (var job in jobs)
+        //    {
+        //        if (job.HasDependency)
+        //        {
+        //            if (dependencyList.Contains(job.DependencyName)) throw new 
+        //            dependencyList.Add(job.DependencyName);
+        //            jobNames = ReorderList(job, jobNames);
+        //        }
+        //    }
+        //    return jobNames;
+        //}
+
+        private List<string> ReorderList(Job job, List<string> jobNames)
+        {
+            var positionOfJob = jobNames.IndexOf(job.Name);
+            var positionOfDependency = jobNames.IndexOf(job.DependencyName);
+
+            if (positionOfDependency > positionOfJob)
+            {
+                jobNames = MoveDependencyInFrontOfCurrentJob(job, jobNames, positionOfJob);
+            }
+            return jobNames;
+        }
+
+        private List<string> MoveDependencyInFrontOfCurrentJob(Job job, List<string> jobNames, int positionOfJob)
+        {
+            jobNames.Remove(job.DependencyName);
+            jobNames.Insert(positionOfJob, job.DependencyName);
             return jobNames;
         }
 
@@ -56,11 +86,15 @@ namespace Instructions
             foreach (var job in jobs)
             {
                 var jobName = job.Name;
-                if (!jobNames.Contains(jobName)) jobNames.Add(jobName);
+                
+                jobNames.Add(jobName);
             }
 
             return jobNames;
         }
     }
-    
+
+    public class CircularDependencyException : Exception
+    {
+    }
 }

@@ -8,3 +8,8 @@ C:\dev\kata\OrderedJobsKata\OrderedJobs\bin\Debug\OrderedJobs.pdb
 C:\dev\kata\OrderedJobsKata\OrderedJobs\obj\Debug\ResolveAssemblyReference.cache
 C:\dev\kata\OrderedJobsKata\OrderedJobs\obj\Debug\OrderedJobs.dll
 C:\dev\kata\OrderedJobsKata\OrderedJobs\obj\Debug\OrderedJobs.pdb
+C:\dev\xpman\OrderedJobsKata\OrderedJobs\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\xpman\OrderedJobsKata\OrderedJobs\obj\Debug\OrderedJobs.dll
+C:\dev\xpman\OrderedJobsKata\OrderedJobs\bin\Debug\OrderedJobs.dll
+C:\dev\xpman\OrderedJobsKata\OrderedJobs\bin\Debug\OrderedJobs.pdb
+C:\dev\xpman\OrderedJobsKata\OrderedJobs\obj\Debug\OrderedJobs.pdb

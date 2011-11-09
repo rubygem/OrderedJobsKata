@@ -1,4 +1,5 @@
-﻿﻿using System.Collections.Generic;
+﻿﻿using System;
+﻿using System.Collections.Generic;
 ﻿using Instructions;
 ﻿using Moq;
 ﻿using NUnit.Framework;
@@ -37,6 +38,25 @@ namespace OrderedJobs.Tests
         }
 
         [Test]
+        public void CircularDependency()
+        {
+
+            try
+            {
+                var jobs = new List<Job> { new Job("a =>"), new Job("b =>c"), new Job("c =>b") };
+                var jobNames = new List<string> { "a", "b", "c" };
+                new Sequence().SortByDependencies(jobs, jobNames);
+                Assert.Fail("Expected Circular Dependency Exception");
+            }
+            catch (CircularDependencyException)
+            {    
+                Assert.Pass();
+            }
+            
+
+        }
+        
+        [Test]
         public void SortByDependencies()
         {
             var orderedJobNames = new List<string> {"b", "c", "a"};
@@ -47,4 +67,6 @@ namespace OrderedJobs.Tests
 
 
     }
+
+    
 }

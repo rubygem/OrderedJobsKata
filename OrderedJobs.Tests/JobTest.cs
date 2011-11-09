@@ -16,13 +16,13 @@ namespace Instructions.Tests
         [Test]
         public void InstructionReturnsJobDependency()
         {
-            Assert.That(new Job("a=>").Dependency, Is.Null);
+            Assert.That(new Job("a=>").DependencyName, Is.Null);
         }
 
         [Test]
         public void InstructionReturnsJobItDependsOn()
         {
-            Assert.That(new Job("a=>b").Dependency.Name, Is.EqualTo("b"));
+            Assert.That(new Job("a=>b").DependencyName, Is.EqualTo("b"));
         }
 
         [Test]

@@ -7,7 +7,7 @@ namespace OrderedJobs
         public Job(string instruction)
         {
             _instruction = instruction.Split(new[] {"=>"}, StringSplitOptions.RemoveEmptyEntries);
-            if (HasDependency && Dependency.Name == Name) throw new SelfReferencingException();
+            if (HasDependency && DependencyName == Name) throw new SelfReferencingException();
 
         }
 
@@ -18,14 +18,14 @@ namespace OrderedJobs
             get { return _instruction[0].Trim(); }
         }
 
-        public Job Dependency
+        public string DependencyName
         {
             get
             {
-                Job dependency = null;
+                string dependency = null;
                 if (_instruction.Length > 1)
                 {
-                    dependency = new Job(_instruction[1].Trim());
+                    dependency = _instruction[1].Trim();
                 }
                 return dependency;    
             }
@@ -33,7 +33,11 @@ namespace OrderedJobs
 
         public bool HasDependency
         {
-            get { return Dependency != null; }
+            get { return DependencyName != null; }
         }
+    }
+
+    public class SelfReferencingException : Exception
+    {
     }
 }

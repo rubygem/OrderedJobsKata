@@ -16,7 +16,7 @@ namespace Instructions.Tests
             var line2 = "b =>";
             var line3 = "c =>";
 
-            String instructions = "a =>\nb =>\nc =>";
+            String instructions = String.Join(Environment.NewLine, new[] {line1, line2, line3});
 
             String[] splitInstructions = new[] {line1, line2, line3};
             Assert.That(new Instructions().List(instructions), Is.EqualTo(splitInstructions));
@@ -31,24 +31,18 @@ namespace Instructions.Tests
         [Test]
         public void ComputeInstructionsGetsTheSequence()
         {
-            var line1 = "a =>";
-            var line2 = "b =>";
-            var line3 = "c =>";
-
-            String[] splitInstructions = new[] { line1, line2, line3 };
-            
-            String instructions = "a =>\nb =>\nc =>";
+            String instructions = @"a =>
+                                    b =>
+                                    c =>";
 
             var mockSequence = new Mock<ISequence>();
-            var sequence = new List<string>() { "a", "b", "c" };
+            var sequence = new List<string> {"a", "b", "c"};
             mockSequence
                 .Setup(x => x.GetSequence(It.IsAny<String[]>()))
                 .Returns(sequence);
 
-            Assert.That(new Instructions(instructions, mockSequence.Object).ComputeSequence(), 
-                Is.EqualTo("abc"));
-
-            mockSequence.Verify(x => x.GetSequence(splitInstructions));
+            Assert.That(new Instructions(instructions, mockSequence.Object).ComputeSequence(),
+                        Is.EqualTo("abc"));
         }
 
         [Test]

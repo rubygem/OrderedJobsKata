@@ -13,42 +13,42 @@
       <File id="5F699334-8109-431A-A775-4C9630C3C833/f:InstructionsTests.cs" caret="1160" fromTop="26" />
       <File id="5F699334-8109-431A-A775-4C9630C3C833/f:JobTest.cs" caret="274" fromTop="13" />
       <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Instructions.cs" caret="1021" fromTop="38" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1528" fromTop="29" />
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="1854" fromTop="40" />
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="1648" fromTop="34" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Job.cs" caret="743" fromTop="32" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="1588" fromTop="26" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Job.cs" caret="978" fromTop="39" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="2943" fromTop="38" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1253" fromTop="30" />
     </RecentFiles>
     <RecentEdits>
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="1632" fromTop="17" />
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="1653" fromTop="23" />
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="409" fromTop="14" />
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="659" fromTop="21" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="152" fromTop="7" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="297" fromTop="14" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="297" fromTop="12" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:ISequence.cs" caret="138" fromTop="7" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Instructions.cs" caret="1118" fromTop="20" />
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:InstructionsTests.cs" caret="1224" fromTop="17" />
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:InstructionsTests.cs" caret="1487" fromTop="33" />
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="953" fromTop="31" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="857" fromTop="25" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="857" fromTop="30" />
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:JobTest.cs" caret="886" fromTop="25" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Job.cs" caret="136" fromTop="26" />
       <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Job.cs" caret="720" fromTop="19" />
       <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="707" fromTop="20" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1920" fromTop="33" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1920" fromTop="31" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1909" fromTop="37" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="671" fromTop="17" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1675" fromTop="29" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1593" fromTop="40" />
-      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1483" fromTop="26" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="2686" fromTop="33" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="2686" fromTop="31" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="2675" fromTop="37" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="2441" fromTop="29" />
       <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="1935" fromTop="43" />
       <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="1985" fromTop="43" />
       <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="2175" fromTop="49" />
-      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="1648" fromTop="34" />
       <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Job.cs" caret="564" fromTop="22" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Job.cs" caret="312" fromTop="9" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Job.cs" caret="990" fromTop="39" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="2943" fromTop="48" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="2943" fromTop="51" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:OrderedJobsKata.cs" caret="2943" fromTop="38" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="1317" fromTop="41" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="1802" fromTop="34" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="1737" fromTop="39" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="1655" fromTop="29" />
+      <File id="5F699334-8109-431A-A775-4C9630C3C833/f:SequenceTests.cs" caret="2256" fromTop="48" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="2787" fromTop="49" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1408" fromTop="30" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="2378" fromTop="36" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="2135" fromTop="32" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1408" fromTop="15" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1615" fromTop="22" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="2063" fromTop="34" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="809" fromTop="29" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1052" fromTop="37" />
+      <File id="935173FA-D4E7-40ED-9605-DF3681E40D30/f:Sequence.cs" caret="1253" fromTop="30" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -63,16 +63,16 @@
   </UnitTestRunnerNUnit>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="public" priority="14" />
-      <Item value="void" priority="13" />
-      <Item value="Assert`0" priority="7" />
-      <Item value="string" priority="11" />
+      <Item value="public" priority="16" />
+      <Item value="void" priority="15" />
+      <Item value="Assert`0" priority="9" />
+      <Item value="string" priority="12" />
       <Item value="Is`0" priority="7" />
       <Item value="String`0" priority="7" />
-      <Item value="return" priority="12" />
+      <Item value="return" priority="13" />
       <Item value="jobs" priority="3" />
       <Item value="new" priority="31" />
-      <Item value="Job`0" priority="9" />
+      <Item value="Job`0" priority="10" />
       <Item value="ITestCaseData`0" priority="1" />
       <Item value="j" priority="1" />
       <Item value="Dependency" priority="1" />
@@ -81,7 +81,7 @@
       <Item value="StringSplitOptions`0" priority="1" />
       <Item value="var" priority="18" />
       <Item value="split" priority="1" />
-      <Item value="if" priority="7" />
+      <Item value="if" priority="11" />
       <Item value="Length" priority="0" />
       <Item value="private" priority="0" />
       <Item value="set" priority="0" />
@@ -94,11 +94,11 @@
       <Item value="Jobs`0" priority="0" />
       <Item value="List&lt;string&gt;" priority="1" />
       <Item value="SetUp" priority="1" />
-      <Item value="List" priority="1" />
+      <Item value="List" priority="2" />
       <Item value="stringJobs" priority="13" />
-      <Item value="job" priority="9" />
+      <Item value="job" priority="15" />
       <Item value="_expectedJobs" priority="1" />
-      <Item value="foreach" priority="10" />
+      <Item value="foreach" priority="11" />
       <Item value="throw" priority="1" />
       <Item value="NotImplementedException" priority="0" />
       <Item value="_sequence" priority="0" />
@@ -116,14 +116,20 @@
       <Item value="dependency" priority="3" />
       <Item value="for" priority="1" />
       <Item value="Int16`0" priority="0" />
-      <Item value="jobNames" priority="7" />
+      <Item value="jobNames" priority="8" />
       <Item value="positionOfDependency" priority="0" />
       <Item value="positionOfJob" priority="1" />
       <Item value="result" priority="0" />
       <Item value="Name" priority="0" />
+      <Item value="try" priority="0" />
+      <Item value="CircularDependencyException`0" priority="0" />
+      <Item value="true" priority="0" />
+      <Item value="false" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
       <Item value="That`0" priority="6" />
+      <Item value="Pass`0" priority="0" />
+      <Item value="Fail`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
       <Item value="Empty" priority="3" />
@@ -138,6 +144,9 @@
     <ItemStatistics item="Qualified:OrderedJobs.Job">
       <Item value="JobName" priority="1" />
       <Item value="ToString`0" priority="0" />
+      <Item value="Dependency" priority="3" />
+      <Item value="HasDependency" priority="0" />
+      <Item value="Name" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@Moq.It">
       <Item value="Is`1" priority="0" />

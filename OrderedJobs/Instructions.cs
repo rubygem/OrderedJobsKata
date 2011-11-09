@@ -33,7 +33,7 @@ namespace Instructions
 
         private string[] Split(string instructions)
         {
-            return instructions.Split('\n');
+            return instructions.Split(new string[]{Environment.NewLine}, StringSplitOptions.None);
         }
 
         public String ComputeSequence()
@@ -46,6 +46,10 @@ namespace Instructions
             catch (SelfReferencingException)
             {
                 return "Error: jobs can't depend on themselves";
+            }
+            catch(CircularDependencyException)
+            {
+                return "Error: circular dependency found";
             }
             return String.Join("", sequence);
         }

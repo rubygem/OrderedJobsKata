@@ -9,27 +9,23 @@ namespace Instructions.Tests
         [Test]
         public void StepOneEmptyStringReturnsEmptySequence()
         {
-            String result = new Instructions(String.Empty).ComputeSequence();
-            Assert.That(result, Is.EqualTo(""));
+            Assert.That(new Instructions(String.Empty).ComputeSequence(), Is.EqualTo(""));
         }
 
         [Test]
         public void StepTwoJobAReturnsA()
         {
-            String result = new Instructions("a =>").ComputeSequence();
-            Assert.That(result, Is.EqualTo("a"));
+            Assert.That(new Instructions("a =>").ComputeSequence(), Is.EqualTo("a"));
         }
 
         [Test]
         public void StepThreeJobsABCReturnsABC()
         {
-            var line1 = "a =>\n";
-            var line2 = "b =>\n";
-            var line3 = "c =>";
+            var line1 = @"a =>
+                        b =>
+                        c =>";
 
-            String input = line1 + line2 + line3;
-
-            String result = new Instructions(input).ComputeSequence();
+            String result = new Instructions(line1).ComputeSequence();
 
             Assert.That(result, Is.EqualTo("abc"));
         }
@@ -37,13 +33,11 @@ namespace Instructions.Tests
         [Test]
         public void StepFourMultipleJobsSingleDependency()
         {
-            var line1 = "a =>\n";
-            var line2 = "b => c\n";
-            var line3 = "c =>";
+            var line1 = @"a =>
+                        b => c
+                        c =>";
 
-            String input = line1 + line2 + line3;
-
-            String result = new Instructions(input).ComputeSequence();
+            String result = new Instructions(line1).ComputeSequence();
 
             Assert.That(result, Is.EqualTo("acb"));
         }
@@ -51,14 +45,15 @@ namespace Instructions.Tests
         [Test]
         public void StepFiveMultipleJobsMultipleDependencies()
         {
-            var instructions = new[]
-                                   {
-                                       "a =>", "b => c", "c => f", "d => a", "e => b", "f =>"
-                                   };
+            var instructions =
+                @"a =>
+                                b => c
+                                c => f
+                                d => a
+                                e => b
+                                f =>";
 
-            var input = String.Join("\n", instructions);
-
-            String result = new Instructions(input).ComputeSequence();
+            String result = new Instructions(instructions).ComputeSequence();
 
             Assert.That(result, Is.EqualTo("afcbde"));
         }
@@ -66,11 +61,11 @@ namespace Instructions.Tests
         [Test]
         public void StepSixSelfReferencingDependency()
         {
-            var instructions = new[] {"a =>", "b =>", "c => c"};
+            var instructions = @"a =>
+                                b =>
+                                c => c";
 
-            var input = String.Join("\n", instructions);
-
-            String result = new Instructions(input).ComputeSequence();
+            String result = new Instructions(instructions).ComputeSequence();
 
             Assert.That(result, Is.EqualTo("Error: jobs can't depend on themselves"));
         }
@@ -78,19 +73,14 @@ namespace Instructions.Tests
         [Test]
         public void StepSevenCircularDependencies()
         {
-            var instructions = new[]
-                                   {
-                                       "a =>",
-                                       "b => c",
-                                       "c => f",
-                                       "d => a",
-                                       "e =>",
-                                       "f => b"
-                                   };
+            var instructions = @"a =>
+                               b => c
+                               c => f
+                               d => a
+                               e =>
+                               f => b";
 
-            var input = String.Join("\n", instructions);
-
-            String result = new Instructions(input).ComputeSequence();
+            String result = new Instructions(instructions).ComputeSequence();
 
             Assert.That(result, Is.EqualTo("Error: circular dependency found"));
         }
